@@ -40,7 +40,8 @@ def predict(formatted_name):
 
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    model.fit(X, y, epochs=100, batch_size=1)
+    # model.fit(X, y, epochs=100, batch_size=1)
+    model.fit(X, y, epochs=10, batch_size=1)
 
     last_sequence = data[-sequence_length:]
     last_sequence = np.array(last_sequence).reshape(1, sequence_length, 1)
